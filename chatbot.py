@@ -81,7 +81,7 @@ class VanillaRNN:
         self.hidden_size = hidden_size
 
         # Xavier initialisation
-        self.Wxh = np.random.randn(hidden_size, input_size)  * np.sqrt(2.0 / hidden_size)
+        self.Wxh = np.random.randn(hidden_size, input_size)  * np.sqrt(2.0 / input_size)
         self.Whh = np.random.randn(hidden_size, hidden_size) * np.sqrt(2.0 / hidden_size)
         self.Why = np.random.randn(output_size, hidden_size) * np.sqrt(2.0 / hidden_size)
         self.bh  = np.zeros((hidden_size, 1))
